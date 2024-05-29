@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin-left: 330px; /* Aligns the menu icon to the right */
+}
+
+#menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    display: none;
+    margin: 2rem 0;
+}
+
+.content-section {
+    display: none;
+}
+
+.plan {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+}
+
+.plan h3 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav ul.visible {
+        display: flex;
+        animation: slideIn 0.5s ease-out;
+    }
+
+    nav ul li {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    nav ul.visible li {
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    nav ul.visible li:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    nav ul.visible li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    nav ul.visible li:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    nav ul.visible li:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+}
+
+/* Keyframe animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style for headings */
+h2, h3, h4 {
+    background-color: #87CEEB; /* Sky blue background */
+    color: #483C32;           /* Taupe text color */
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.img1 img{
+    width: 380px;
+    height: auto;
+     
+}
+
+.top img{
+    height: auto;
+    width: 369px;
+    
+}
+

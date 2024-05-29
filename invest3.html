@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        
+        <div class="top"><img src="logo.png" alt="Genesis Mining Company Logo" id="logo"></div>
+        <div>
+            <h1>Genesis Mining Company</h1>
+            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+        </div>
+      
+        
+        
+        
+
+
+    <div class="payment-options">
+        <h2>Choose your deposit method for $5000:</h2>
+        <div class="option">
+            <input type="radio" id="bitcoin" name="payment-method">
+            <label for="bitcoin">Option 1: Deposit Bitcoin</label>
+            <button onclick="copyAddress('copy confirmed')">Click to copy BTC address</button>
+        </div>
+        <div class="option">
+            <input type="radio" id="usdt" name="payment-method">
+            <label for="usdt">Option 2: Deposit USDT</label>
+            <button onclick="copyAddress('click 2 confirmed')">Click to copy USDT address</button>
+        </div>
+        <div class="option">
+            <input type="radio" id="bank" name="payment-method">
+            <label for="bank">Option 3: Deposit via Bank Transfer</label>
+            <button onclick="copyDetail('click 3 confirmed')">Click to copy deposit details</button>
+        </div>
+    </div>
+
+    <script>
+        function copyAddress(address) {
+            navigator.clipboard.writeText(address)
+            .then(() => {
+                alert('Address copied to clipboard: ' + address);
+            })
+            .catch(err => {
+                console.error('Failed to copy address: ', err);
+            });
+        }
+
+        function copyDetails() {
+            // Replace the details below with your actual bank transfer details
+            const details = `
+            Account Name: John Doe
+            Account Number: 123456789
+            Routing Number: 987654321
+            Bank Name: Example Bank
+            `;
+            
+            navigator.clipboard.writeText(details)
+            .then(() => {
+                alert('Deposit details copied to clipboard:\n' + details);
+            })
+            .catch(err => {
+                console.error('Failed to copy details: ', err);
+            });
+        }
+    </script>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+    <div class="img1"><img src="logo1.png" alt=""></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+    <footer>
+        <p>&copy; 2024 Genesis Mining Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
